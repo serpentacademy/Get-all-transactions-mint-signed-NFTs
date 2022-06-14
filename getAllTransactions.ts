@@ -4,7 +4,7 @@ const fs = require('fs')
 let globalI = 5746;
 //last transaction
 //let beforeString = "5pEuabGkJxv7v32iJeSVoPWbraWURjvNT12e18YUHGoEsgPePdqy3GzBeYqijcikg7QQbU4fDUHzmYUGbRG5erSJ"
-let beforeString = "2bKUv7tscaaNzBxMv7sPtKatR5Jw45Y9psZ9Ko62Fcc89WKC5WP545aDVMSeF6GeTjdfgcumemwbhRKuS1vkphD1"
+let beforeString = "A TRANSACTION SIGNATURE"
 
 const connection = new Connection(clusterApiUrl("mainnet-beta"));
 async function getTransactionsOfUser(address: string, connection: Connection, beforeS: string, limitI: number) {
@@ -62,8 +62,8 @@ function writeTransactions(transactions:any[]){
 
   setTimeout(function() {
     //your code to be executed after 1 second
-  }, delayInMilliseconds);  getTransactionsOfUser("9m5kFDqgpf7Ckzbox91RYcADqcmvxW4MmuNvroD5H2r9", connection, JSON.parse(JSON.stringify(transactions[transactions.length-1]))["signature"], 1);
+  }, delayInMilliseconds);  getTransactionsOfUser("YOUR PUBLIC WALLET ADDRESS", connection, JSON.parse(JSON.stringify(transactions[transactions.length-1]))["signature"], 1);
 }
 
   let options =""
-  getTransactionsOfUser("9m5kFDqgpf7Ckzbox91RYcADqcmvxW4MmuNvroD5H2r9", connection, beforeString, 5);
+  getTransactionsOfUser("YOUR PUBLIC WALLET ADDRESS", connection, beforeString, 5);

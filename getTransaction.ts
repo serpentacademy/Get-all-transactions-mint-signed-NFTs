@@ -44,4 +44,4 @@ async function getTransactionsOfUser(address: string, connection: Connection, be
     throw err;
   }
 }
-getTransactionsOfUser("9m5kFDqgpf7Ckzbox91RYcADqcmvxW4MmuNvroD5H2r9", connection, beforeString, 5);
+getTransactionsOfUser("YOUR PUBLIC WALLET ADDRESS", connection, beforeString, 5);

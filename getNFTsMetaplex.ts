@@ -3,7 +3,7 @@ import { Metadata } from '@metaplex-foundation/mpl-token-metadata';
 
 (async () => {
   const connection = new Connection('mainnet-beta');
-  const ownerPublickey = '9m5kFDqgpf7Ckzbox91RYcADqcmvxW4MmuNvroD5H2r9';
+  const ownerPublickey = 'YOUR PUBLIC WALLET ADDRESS';
   const nftsmetadata_old = await Metadata.findDataByOwner(connection, ownerPublickey);
   const nftsmetadata =await Metadata.findByOwner(connection, ownerPublickey);
 

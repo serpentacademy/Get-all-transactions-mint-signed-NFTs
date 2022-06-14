@@ -2,7 +2,7 @@ import { TOKEN_PROGRAM_ID } from "@solana/spl-token";
 import { clusterApiUrl, Connection } from "@solana/web3.js";
 
 (async () => {
-  const MY_WALLET_ADDRESS = "9m5kFDqgpf7Ckzbox91RYcADqcmvxW4MmuNvroD5H2r9";
+  const MY_WALLET_ADDRESS = "YOUR PUBLIC WALLET ADDRESS";
   const connection = new Connection(clusterApiUrl("mainnet-beta"), "confirmed");
 
   const accounts = await connection.getParsedProgramAccounts(
