@@ -3,3 +3,4 @@ transactions/*
 mints/*
 */
 !.gitignore
+.DS_Store
