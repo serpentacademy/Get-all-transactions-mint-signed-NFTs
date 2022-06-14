@@ -1,7 +1,7 @@
 const fs = require('fs');
 
-let fromI: number = 3070
-let toI: number = 3511
+let fromI: number = 4600
+let toI: number = 5507
 for (let i=fromI; i<= toI; i++){
   fs.readFile('transactions/'+i+'.txt', 'utf8', (err:string, data:Uint8ClampedArrayConstructor) => {
     if (err) {
