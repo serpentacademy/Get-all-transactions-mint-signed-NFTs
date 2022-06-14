@@ -2,10 +2,10 @@ import {PublicKey, Connection, clusterApiUrl, ConfirmedSignaturesForAddress2Opti
 import { delay } from 'lodash';
 const fs = require('fs')
 
-let globalI = 1234;
+let globalI = 3635;
 //last transaction
 //let beforeString = "5pEuabGkJxv7v32iJeSVoPWbraWURjvNT12e18YUHGoEsgPePdqy3GzBeYqijcikg7QQbU4fDUHzmYUGbRG5erSJ"
-let beforeString = "2e5W88V6s3AEvTAm59B8bQAavSNnaadvBWPVWNM3yGCPcjQtuVzMwBVv4jPFC3fJAj9YKWeeEwCb8q3HFDnVuWgQ"
+let beforeString = "3eAMATVo3iP6d3BAsNsTpDw6tWL7AvMHbvJaduo4TQxLJh6QTCHfvNT3SXugvnaDSp1Xej22fo82nziXnzBUr4FX"
 
 const connection = new Connection(clusterApiUrl("mainnet-beta"));
 async function getTransactionsOfUser(address: string, connection: Connection, beforeS: string, limitI: number) {
@@ -13,7 +13,7 @@ async function getTransactionsOfUser(address: string, connection: Connection, be
   try {
     const publicKey = new PublicKey(address);
     const transSignatures =
-      await connection.getConfirmedSignaturesForAddress2(publicKey, {limit:limitI, before: beforeS} );
+      await connection.getSignaturesForAddress(publicKey, {limit:limitI, before: beforeS} );
     console.log({ transSignatures });
     const transactions = [];
     for (let i = 0; i < transSignatures.length; i++) {
